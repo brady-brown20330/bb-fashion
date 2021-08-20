@@ -9,12 +9,10 @@ const Stack = Contentstack.Stack({
 });
 
 export default {
-  getEntry(ctUid, locale) {
+  getEntry(ctUid) {
     return new Promise((resolve, reject) => {
       Stack.ContentType(ctUid)
         .Query()
-        .language(locale)
-        .includeOwner()
         .toJSON()
         .find()
         .then(
