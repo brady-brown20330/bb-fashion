@@ -2,20 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +13,45 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.grid {
+  /* display: grid; */
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* BlogPostTile */
+.tile {
+  display: inline-block;
+  white-space: normal;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  margin: 5vw;
+  width: 350px;
+  height: fit-content;
+}
+
+.tile:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.tile-img {
+  height: 15vw;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.tile-content-container {
+  padding: 2px 16px;
+}
+
+.tile-title {
+  font-size: 20px;
+}
+
+.tile-link {
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  color: #222;
 }
