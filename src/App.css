@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 }
-
+/* Header */
 .App-header {
   background-color: #282c34;
   min-height: 25vh;
@@ -13,6 +13,35 @@
   color: white;
 }
 
+/* Nav */
+/* Nav */
+nav {
+  border: groove 1px;
+  background-color: #282535;
+}
+
+.nav-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;  
+}
+
+.nav-li {
+  display: inline-block;
+  margin-left: 1vw;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  color: aliceblue;
+}
+
+
+/* Product List */
 .grid {
   /* display: grid; */
   grid-gap: 15px;

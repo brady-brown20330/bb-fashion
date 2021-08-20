@@ -1,11 +1,13 @@
 import './App.css';
 import Stack from './sdk/entry';
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 // Components
 import Loading from './components/Loading';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Products } from './components/Products';
+import Nav from './components/Nav';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,18 +18,38 @@ class App extends React.Component {
       header: undefined,
       footer: undefined,
       products: undefined,
+      navFilter: undefined,
+    }  
+
+  }    
+  
+  handleNavClick = (e) => {
+      // console.log('THE EVENT: ', e.target.firstChild.nodeValue)
+      this.setState({
+        navFilter: e.target.firstChild.nodeValue
+      })
     }
-  }
+
+    handleFilterReset = () => {
+      // console.log('THE EVENT: ', e.target.firstChild.nodeValue)
+      this.setState({
+        navFilter: undefined
+      })
+    }
+
 
   render() {
     if (this.state.loading === true) return <Loading text="Loading" />
 
     return (
-      <div className='App'>
-        <Header header={this.state.header} />
-          <Products products={this.state.products} />
-        <Footer footer={this.state.footer} />
-      </div>
+      <Router>
+        <div className='App'>
+          <Header header={this.state.header} />
+           <Nav products={this.state.products} handleNavClick={this.handleNavClick.bind(this)} handleFilterReset={this.handleFilterReset.bind(this)}/>
+            <Products products={this.state.products} filter={this.state.navFilter}/>
+          <Footer footer={this.state.footer} />
+        </div>
+      </Router>
     )
   }
 

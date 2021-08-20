@@ -1,7 +1,6 @@
 import React from 'react';
 
 export const Footer = (props) => {
-  console.log(`Props in Footer: ${props}`)
   return (
     <div>
       <p>{props.footer.contact_info.name}</p>
