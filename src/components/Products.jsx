@@ -6,10 +6,10 @@ export const Products = (props) => {
   if (props.filter == undefined) {
     return (
       <div className='grid'>
-        {props.products.map((product) => {
+        {props.products.map((product, key) => {
   
           return (
-            <div className='tile'>
+            <div className='tile' key={key}>
               <img className='tile-img' src={product.product_image[0].url}/>
               <div className='tile-content-container'>
                 <h3 className='tile-title'>{product.title}</h3>
@@ -25,10 +25,10 @@ export const Products = (props) => {
     let filteredProducts = props.products.filter((product) => product.category === props.filter)
     return (
       <div className='grid'>
-        {filteredProducts.map((product) => {
+        {filteredProducts.map((product, key) => {
   
           return (
-            <div className='tile'>
+            <div className='tile' key={key}>
               <img className='tile-img' src={product.product_image[0].url}/>
               <div className='tile-content-container'>
                 <h3 className='tile-title'>{product.title}</h3>

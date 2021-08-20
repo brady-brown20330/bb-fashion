@@ -17,9 +17,9 @@ const Nav = (props) => {
     <nav>
       <ul className='nav-ul'>
         <button className='nav-li' onClick={props.handleFilterReset}>Reset Filters</button>
-        {props.products.map((product) => {
+        {props.products.map((product, key) => {
           return (
-          <button className='nav-li' onClick={props.handleNavClick}>
+          <button className='nav-li' key={key} onClick={props.handleNavClick}>
             {product.category}
           </button>
           )
