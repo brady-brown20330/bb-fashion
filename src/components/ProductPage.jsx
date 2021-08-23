@@ -1,18 +1,21 @@
 import React from 'react';
+import { BootstrapCarousel } from './BootstrapCarousel';
 
 export const ProductPage = (props) => {
-  console.log(`props in the product page: ${props.products}`)
+
   let url = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1)
 
   let currentProduct = props.products.filter((product, i) => {
     return props.products[i].url === url
   })  
   
-  console.log('current product: ', url)
+  console.log('current product: ', currentProduct[0])
   if (!currentProduct[0]) return <h1>404 Error</h1>
-  
 
   return (
-    <div>This is a Product</div>
+    <div>
+      <h1>{currentProduct[0].title}</h1>
+      <BootstrapCarousel images={currentProduct[0].product_image}/>
+    </div>
   )
 }
