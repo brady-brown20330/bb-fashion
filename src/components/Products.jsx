@@ -10,7 +10,7 @@ export const Products = (props) => {
             <div className='tile' key={key}>
               <img className='tile-img' src={product.product_image[0].url}/>
               <div className='tile-content-container'>
-                <a href={`/products/${product.url}`}>{product.title}</a>
+                <a className='tile-link' href={`/products/${product.url}`}>{product.title}</a>
                 <p>{product.product_slogan}</p>
                 <p>{product.product_description}</p>
               </div>

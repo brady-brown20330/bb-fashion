@@ -28,9 +28,17 @@ nav {
 
 .nav-li {
   display: inline-block;
+  color: #282c34;
   margin-left: 1vw;
   font-size: 18px;
-  font-weight: bold;
+  border-radius: 30px;
+  background: aliceblue;
+  border: none;
+}
+
+.nav-li:hover {      
+  background-color: #282c34;      
+  color: aliceblue; 
 }
 
 .nav-link {
@@ -51,14 +59,16 @@ nav {
 /* BlogPostTile */
 .tile {
   display: inline-block;
-  white-space: normal;
+  /* white-space: normal; */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 3vw;
   height: 350px;
   width: 350px;
   overflow: hidden;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
 }
 
 .tile:hover {
@@ -66,7 +76,7 @@ nav {
 }
 
 .tile-img {
-  height: 15vw;
+  height: 24vw;
   width: 100%;
   object-fit: cover;
   border-radius: 5px 5px 0px 0px;
