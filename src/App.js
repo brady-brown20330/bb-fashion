@@ -25,14 +25,12 @@ class App extends React.Component {
   }    
   
   handleNavClick = (e) => {
-      // console.log('THE EVENT: ', e.target.firstChild.nodeValue)
       this.setState({
         navFilter: e.target.firstChild.nodeValue
       })
     }
 
     handleFilterReset = () => {
-      // console.log('THE EVENT: ', e.target.firstChild.nodeValue)
       this.setState({
         navFilter: undefined
       })
@@ -59,7 +57,7 @@ class App extends React.Component {
             <Route 
             to='/products/'
             render={(props) => (
-              <ProductPage products={this.state.products} />
+              <ProductPage  products={this.state.products} />
             )}
             />
            </Switch>
