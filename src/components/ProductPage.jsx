@@ -12,7 +12,7 @@ export const ProductPage = (props) => {
   
   let getRelatedProducts = (productsList, uidArr) => {
     let relatedProducts = [];
-
+    if (!uidArr) return relatedProducts;
     // if the uid of the product shows up in related, push it to a new array
     for (let i = 0; i < productsList.length; i++) {
       for (let j = 0; j < uidArr.length; j++) {
@@ -21,8 +21,7 @@ export const ProductPage = (props) => {
     }
     return relatedProducts;
   }
-  console.log('related: ', getRelatedProducts(props.products, currentProduct[0].related_products))
-  // console.log('current product: ', currentProduct[0])
+
   if (!currentProduct[0]) return <h1>404 Error</h1>
 
   return (

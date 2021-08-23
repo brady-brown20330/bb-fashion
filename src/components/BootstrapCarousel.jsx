@@ -15,7 +15,7 @@ export const BootstrapCarousel = (props) => {
     <Carousel activeIndex={index} onSelect={handleSelect} style={{width: '50%', margin: 'auto'}}>
       {props.images.map((img, i) => {
         return (
-          <Carousel.Item>
+          <Carousel.Item key={i}>
           <img
             className="d-block w-100"
             src={img.url}
