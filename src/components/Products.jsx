@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Products = (props) => {
-
+  console.log('props in the product component: ', props)
   let gridReturner = (array) => {
     return (
       <div className='grid'>
