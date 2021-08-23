@@ -16,6 +16,9 @@ export const ProductPage = (props) => {
     <div>
       <h1>{currentProduct[0].title}</h1>
       <BootstrapCarousel images={currentProduct[0].product_image}/>
+      <div>${currentProduct[0].price}</div>
+      <p>{currentProduct[0].product_slogan}</p>
+      <p>{currentProduct[0].product_description}</p>
     </div>
   )
 }

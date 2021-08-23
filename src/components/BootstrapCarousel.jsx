@@ -22,10 +22,10 @@ export const BootstrapCarousel = (props) => {
             alt="First slide"
             style={{height: '350px', width: '200px'}}
           />
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>  
         )
       })}
