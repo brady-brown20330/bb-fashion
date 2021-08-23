@@ -44,7 +44,7 @@ nav {
 /* Product List */
 .grid {
   /* display: grid; */
-  grid-gap: 15px;
+  grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
@@ -55,9 +55,10 @@ nav {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 10px;
-  margin: 5vw;
+  margin: 3vw;
+  height: 350px;
   width: 350px;
-  height: fit-content;
+  overflow: hidden;
 }
 
 .tile:hover {

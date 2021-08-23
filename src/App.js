@@ -8,6 +8,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Products } from './components/Products';
 import Nav from './components/Nav';
+import { ProductPage } from './components/ProductPage';
 
 class App extends React.Component {
   constructor(props) {
@@ -45,8 +46,23 @@ class App extends React.Component {
       <Router>
         <div className='App'>
           <Header header={this.state.header} />
-           <Nav products={this.state.products} handleNavClick={this.handleNavClick.bind(this)} handleFilterReset={this.handleFilterReset.bind(this)}/>
-            <Products products={this.state.products} filter={this.state.navFilter}/>
+           <Switch>
+             <Route
+             exact path='/'
+             render={(props) => (
+               <div>
+                 <Nav products={this.state.products} handleNavClick={this.handleNavClick.bind(this)} handleFilterReset={this.handleFilterReset.bind(this)}/>
+                 <Products products={this.state.products} filter={this.state.navFilter}/>
+               </div>
+             )}
+             />
+            <Route 
+            to='/products/'
+            render={(props) => (
+              <ProductPage products={this.state.products} />
+            )}
+            />
+           </Switch>
           <Footer footer={this.state.footer} />
         </div>
       </Router>

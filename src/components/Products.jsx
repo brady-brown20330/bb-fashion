@@ -1,18 +1,18 @@
 import React from 'react';
 
 export const Products = (props) => {
-  console.log(`filter in Products: ${props.filter}`)
   
   if (props.filter == undefined) {
     return (
       <div className='grid'>
         {props.products.map((product, key) => {
-  
+    console.log(`One Product: ${props.product}`)
+
           return (
             <div className='tile' key={key}>
               <img className='tile-img' src={product.product_image[0].url}/>
               <div className='tile-content-container'>
-                <h3 className='tile-title'>{product.title}</h3>
+                <a href={`/products/${product.url}`}>{product.title}</a>
                 <p>{product.product_slogan}</p>
                 <p>{product.product_description}</p>
               </div>
@@ -31,7 +31,7 @@ export const Products = (props) => {
             <div className='tile' key={key}>
               <img className='tile-img' src={product.product_image[0].url}/>
               <div className='tile-content-container'>
-                <h3 className='tile-title'>{product.title}</h3>
+                <a href={`/products/${props.products.url}`}>{product.title}</a>
                 <p>{product.product_slogan}</p>
                 <p>{product.product_description}</p>
               </div>

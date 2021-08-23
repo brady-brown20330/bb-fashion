@@ -21,10 +21,6 @@ const Nav = (props) => {
     }
     return categories;
   }
-  // useEffect(() => {
-  //   getCategories(props.products)
-    
-  // }, []);
 
   let uniq = a => [...new Set(a)];
 
@@ -40,25 +36,6 @@ const Nav = (props) => {
           </button>
           )
         })}
-        {/* <li className='nav-li'>
-          <NavLink
-            to='/'
-            exact
-            activeStyle={activeStyle}
-            className='nav-link'
-            >
-              Home
-          </NavLink>
-        </li>
-        <li className='nav-li'>
-          <NavLink
-            to='/about'
-            activeStyle={activeStyle}
-            className='nav-link'
-            >
-              About
-          </NavLink>
-        </li> */}
       </ul>
     </nav>
   )
