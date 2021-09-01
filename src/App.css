@@ -95,3 +95,11 @@ nav {
   text-decoration: none;
   color: #222;
 }
+
+/* footer */
+
+.footer-containter {
+  background-color: #282535;
+  color: aliceblue;
+  font-size: larger;
+}
