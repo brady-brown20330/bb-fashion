@@ -10,6 +10,7 @@ import { Products } from './components/Products';
 import Nav from './components/Nav';
 import { ProductPage } from './components/ProductPage';
 import { Slogan } from './components/Slogan';
+import { JsonSlogan } from './components/JsonSlogan';
 
 class App extends React.Component {
   constructor(props) {
@@ -56,6 +57,7 @@ class App extends React.Component {
                <div>
                  <Nav products={this.state.products} handleNavClick={this.handleNavClick.bind(this)} handleFilterReset={this.handleFilterReset.bind(this)}/>
                  <Slogan richText={this.state.slogan.rich_text_editor}/>
+                 <JsonSlogan slogan={this.state.slogan.json_rte}/>
                  <Products products={this.state.products} filter={this.state.navFilter}/>
                </div>
              )}
