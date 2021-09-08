@@ -65,7 +65,10 @@ class App extends React.Component {
             <Route 
             to='/products/'
             render={(props) => (
+              <div>
+              <Nav products={this.state.products} handleNavClick={this.handleNavClick.bind(this)} handleFilterReset={this.handleFilterReset.bind(this)}/>
               <ProductPage  products={this.state.products} />
+              </div>
             )}
             />
            </Switch>

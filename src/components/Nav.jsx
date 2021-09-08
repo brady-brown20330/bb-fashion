@@ -27,6 +27,9 @@ const Nav = (props) => {
   // if (categories.length === 0) return <div></div>
   return (
     <nav>
+      <NavLink to="/" className='nav-li '>
+        Home
+      </NavLink>
       <ul className='nav-ul'>
         <button className='nav-li' onClick={props.handleFilterReset}>All</button>
         {uniq(getCategories(props.products)).map((product, key) => {

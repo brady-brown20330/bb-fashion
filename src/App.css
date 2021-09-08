@@ -27,13 +27,15 @@ nav {
 }
 
 .nav-li {
-  display: inline-block;
+  /* display: inline-block; */
   color: #282c34;
-  margin-left: 1vw;
+  padding: 2px;
+  margin: 1vw;
   font-size: 18px;
-  border-radius: 30px;
+  border-radius: 20px;
   background: aliceblue;
   border: none;
+  text-decoration: none;
 }
 
 .nav-li:hover {      
@@ -102,4 +104,17 @@ nav {
   background-color: #282535;
   color: aliceblue;
   font-size: larger;
+}
+
+.carousel-containter {
+  width: 100%;
+}
+
+.carousel-img {
+  height: 55vw;
+  width: auto;
+}
+
+.carousel-btn {
+  margin: 1vw;
 }
